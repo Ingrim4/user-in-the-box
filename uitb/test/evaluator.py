@@ -13,6 +13,10 @@ from uitb.simulator import Simulator
 
 #from uitb.bm_models.effort_models import CumulativeFatigue3CCr, ConsumedEndurance
 
+import torch
+from ruamel.yaml.scalarfloat import ScalarFloat
+
+torch.serialization.add_safe_globals([ScalarFloat])
 
 def natural_sort(l):
     convert = lambda text: int(text) if text.isdigit() else text.lower()
@@ -97,6 +101,7 @@ if __name__ == "__main__":
 
     # Embed visual observations into main mp4 or store as separate mp4 files
     render_mode_perception = "separate" if run_params["unity_record_gameplay"] else "embed"
+    #render_mode_perception = "embed" # TOOD(maurice): manual override
 
     # Use deterministic actions?
     deterministic = False

@@ -1,0 +1,1128 @@
+[
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        },
+        {
+          "name": "xy",
+          "value": {
+            "limit_y": 0.25
+          }
+        },
+        {
+          "name": "xz",
+          "value": {
+            "limit_z": 0.25
+          }
+        },
+        {
+          "name": "xyz",
+          "value": {
+            "limit_y": 0.25,
+            "limit_z": 0.25
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "25",
+          "value": 0.25
+        },
+        {
+          "name": "40",
+          "value": 0.40
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance.cls",
+      "values": [
+        {
+          "name": "abs",
+          "value": "AbsDistance"
+        },
+        {
+          "name": "abs_bonus",
+          "value": "AbsDistanceWithHitBonus"
+        },
+        {
+          "name": "exp",
+          "value": "ExpDistance"
+        },
+        {
+          "name": "exp_bonus",
+          "value": "ExpDistanceWithHitBonus"
+        },
+        {
+          "name": "bonus",
+          "value": "HitBonus"
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "dc_0",
+          "value": {
+            "cls": "Neural",
+            "kwargs": {
+              "weight": 1
+            }
+          }
+        },
+        {
+          "name": "dc_1",
+          "value": {
+            "cls": "Neural",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "dc_2",
+          "value": {
+            "cls": "Neural",
+            "kwargs": {
+              "weight": 0.01
+            }
+          }
+        },
+        {
+          "name": "dc_3",
+          "value": {
+            "cls": "Neural",
+            "kwargs": {
+              "weight": 0.001
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "y",
+          "value": {
+            "disable_x": true,
+            "limit_y": 0.25
+          }
+        },
+        {
+          "name": "z",
+          "value": {
+            "disable_x": true,
+            "limit_z": 0.25
+          }
+        },
+        {
+          "name": "yz",
+          "value": {
+            "disable_x": true,
+            "limit_y": 0.25,
+            "limit_z": 0.25
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "25",
+          "value": 0.25
+        },
+        {
+          "name": "30",
+          "value": 0.30
+        },
+        {
+          "name": "40",
+          "value": 0.40
+        },
+        {
+          "name": "50",
+          "value": 0.50
+        },
+        {
+          "name": "60",
+          "value": 0.60
+        },
+        {
+          "name": "70",
+          "value": 0.70
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance.cls",
+      "values": [
+        {
+          "name": "abs",
+          "value": "AbsDistance"
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "dc",
+          "value": {
+            "cls": "Neural",
+            "kwargs": {
+              "weight": 0.0001
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance.cls",
+      "values": [
+        {
+          "name": "abs",
+          "value": "AbsDistance"
+        },
+        {
+          "name": "abs_bonus",
+          "value": "AbsDistanceWithHitBonus"
+        },
+        {
+          "name": "exp",
+          "value": "ExpDistance"
+        },
+        {
+          "name": "exp_bonus",
+          "value": "ExpDistanceWithHitBonus"
+        },
+        {
+          "name": "bonus",
+          "value": "HitBonus"
+        },
+        {
+          "name": "bonus_negative",
+          "value": "HitBonusNegative"
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "ejk_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 1
+            }
+          }
+        },
+        {
+          "name": "ejk_1",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "jac_0",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 1
+            }
+          }
+        },
+        {
+          "name": "jac_1",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "dc_0",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 1
+            }
+          }
+        },
+        {
+          "name": "dc_1",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "ctc_0",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 1
+            }
+          }
+        },
+        {
+          "name": "ctc_1",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance.cls",
+      "values": [
+        {
+          "name": "abs",
+          "value": "AbsDistance"
+        },
+        {
+          "name": "abs_bonus",
+          "value": "AbsDistanceWithHitBonus"
+        },
+        {
+          "name": "exp",
+          "value": "ExpDistance"
+        },
+        {
+          "name": "exp_bonus",
+          "value": "ExpDistanceWithHitBonus"
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "ejk_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 8
+            }
+          }
+        },
+        {
+          "name": "ejk_1",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 4
+            }
+          }
+        },
+        {
+          "name": "jac_0",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "jac_1",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.025
+            }
+          }
+        },
+        {
+          "name": "dc_0",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "dc_1",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.025
+            }
+          }
+        },
+        {
+          "name": "ctc_0",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.01
+            }
+          }
+        },
+        {
+          "name": "ctc_1",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.0025
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance.cls",
+      "values": [
+        {
+          "name": "abs",
+          "value": "AbsDistance"
+        },
+        {
+          "name": "abs_bonus",
+          "value": "AbsDistanceWithHitBonus"
+        },
+        {
+          "name": "exp",
+          "value": "ExpDistance"
+        },
+        {
+          "name": "exp_bonus",
+          "value": "ExpDistanceWithHitBonus"
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "ejk_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 3
+            }
+          }
+        },
+        {
+          "name": "ejk_1",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 1.5
+            }
+          }
+        },
+        {
+          "name": "jac_0",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.5
+            }
+          }
+        },
+        {
+          "name": "jac_1",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.25
+            }
+          }
+        },
+        {
+          "name": "dc_0",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.5
+            }
+          }
+        },
+        {
+          "name": "dc_1",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.25
+            }
+          }
+        },
+        {
+          "name": "ctc_0",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.01
+            }
+          }
+        },
+        {
+          "name": "ctc_1",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.005
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance",
+      "values": [
+        {
+          "name": "abs",
+          "value": {
+            "cls": "AbsDistance"
+          }
+        },
+        {
+          "name": "exp",
+          "value": {
+            "cls": "ExpDistance"
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "ejk_5_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 5.0
+            }
+          }
+        },
+        {
+          "name": "ejk_2_5",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 2.5
+            }
+          }
+        },
+        {
+          "name": "jac_0_4",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.4
+            }
+          }
+        },
+        {
+          "name": "jac_0_2",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.2
+            }
+          }
+        },
+        {
+          "name": "dc_0_4",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.4
+            }
+          }
+        },
+        {
+          "name": "dc_0_2",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.2
+            }
+          }
+        },
+        {
+          "name": "ctc_0_008",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.008
+            }
+          }
+        },
+        {
+          "name": "ctc_0_006",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.006
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance",
+      "values": [
+        {
+          "name": "abs_bonus_0_25",
+          "value": {
+            "cls": "AbsDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.25
+            }
+          }
+        },
+        {
+          "name": "abs_bonus_0_5",
+          "value": {
+            "cls": "AbsDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.5
+            }
+          }
+        },
+        {
+          "name": "abs_bonus_0_75",
+          "value": {
+            "cls": "AbsDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.75
+            }
+          }
+        },
+        {
+          "name": "exp_bonus_0_2",
+          "value": {
+            "cls": "ExpDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.2
+            }
+          }
+        },
+        {
+          "name": "exp_bonus_0_3",
+          "value": {
+            "cls": "ExpDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.3
+            }
+          }
+        },
+        {
+          "name": "exp_bonus_0_4",
+          "value": {
+            "cls": "ExpDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "dc_0_4",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.4
+            }
+          }
+        },
+        {
+          "name": "dc_0_2",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.2
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance",
+      "values": [
+        {
+          "name": "abs",
+          "value": {
+            "cls": "AbsDistance"
+          }
+        },
+        {
+          "name": "abs_bonus_0_5",
+          "value": {
+            "cls": "AbsDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.375
+            }
+          }
+        },
+        {
+          "name": "exp",
+          "value": {
+            "cls": "ExpDistance"
+          }
+        },
+        {
+          "name": "exp_bonus_0_3",
+          "value": {
+            "cls": "ExpDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.3
+            }
+          }
+        },
+        {
+          "name": "bonus",
+          "value": {
+            "cls": "HitBonus"
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "ejk_3_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 3
+            }
+          }
+        },
+        {
+          "name": "ejk_1_5",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 1.5
+            }
+          }
+        },
+        {
+          "name": "jac_0_25",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.25
+            }
+          }
+        },
+        {
+          "name": "jac_0_1",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "dc_0_1",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "dc_0_05",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.05
+            }
+          }
+        },
+        {
+          "name": "ctc_0_01",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.01
+            }
+          }
+        },
+        {
+          "name": "ctc_0_0025",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.0025
+            }
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "path": "simulation.task.kwargs",
+      "append": true,
+      "values": [
+        {
+          "name": "x",
+          "value": null
+        },
+        {
+          "name": "xz",
+          "value": {
+            "limit_z": 0.25
+          }
+        },
+        {
+          "name": "xy",
+          "value": {
+            "limit_y": 0.25
+          }
+        },
+        {
+          "name": "xyz",
+          "value": {
+            "limit_y": 0.25,
+            "limit_z": 0.25
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.offset_body_x",
+      "values": [
+        {
+          "name": "35",
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "path": "simulation.task.kwargs.distance",
+      "values": [
+        {
+          "name": "abs",
+          "value": {
+            "cls": "AbsDistance"
+          }
+        },
+        {
+          "name": "abs_bonus_0_375",
+          "value": {
+            "cls": "AbsDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.375
+            }
+          }
+        },
+        {
+          "name": "exp",
+          "value": {
+            "cls": "ExpDistance"
+          }
+        },
+        {
+          "name": "exp_bonus_0_2",
+          "value": {
+            "cls": "ExpDistanceWithHitBonus",
+            "kwargs": {
+              "bonus": 0.2
+            }
+          }
+        },
+        {
+          "name": "bonus",
+          "value": {
+            "cls": "HitBonus"
+          }
+        }
+      ]
+    },
+    {
+      "path": "simulation.bm_model.kwargs.effort_model",
+      "values": [
+        {
+          "name": "zero",
+          "value": {
+            "cls": "Zero"
+          }
+        },
+        {
+          "name": "ejk_2_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 2
+            }
+          }
+        },
+        {
+          "name": "ejk_1_0",
+          "value": {
+            "cls": "EJK",
+            "kwargs": {
+              "weight": 1
+            }
+          }
+        },
+        {
+          "name": "jac_0_1",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "jac_0_05",
+          "value": {
+            "cls": "JAC",
+            "kwargs": {
+              "weight": 0.05
+            }
+          }
+        },
+        {
+          "name": "dc_0_1",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.1
+            }
+          }
+        },
+        {
+          "name": "dc_0_05",
+          "value": {
+            "cls": "DC",
+            "kwargs": {
+              "weight": 0.05
+            }
+          }
+        },
+        {
+          "name": "ctc_0_0025",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.0025
+            }
+          }
+        },
+        {
+          "name": "ctc_0_001",
+          "value": {
+            "cls": "CTC",
+            "kwargs": {
+              "weight": 0.001
+            }
+          }
+        }
+      ]
+    }
+  ]
+]

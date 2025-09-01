@@ -18,7 +18,6 @@ setup(
    url='https://github.com/aikkala/user-in-the-box',
    license='LICENSE',
    description='Modeling and simulating HCI interaction tasks in MuJoCo',
-   long_description=open('README.md').read(),
    python_requires='>=3.8',
    install_requires=[
        "gymnasium>=0.28",

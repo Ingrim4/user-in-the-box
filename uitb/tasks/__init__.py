@@ -1,4 +1,5 @@
 from .remote_driving.RemoteDriving import RemoteDriving
+from .mirroring.Mirroring import Mirroring
 from .pointing.Pointing import Pointing
 from .tracking.Tracking import Tracking
 from .choice_reaction.ChoiceReaction import ChoiceReaction

@@ -81,6 +81,8 @@ class Camera:
       ValueError: If `camera_id` is outside the valid range, or if `width` or
         `height` exceed the dimensions of MuJoCo's offscreen framebuffer.
     """
+    self._camera_id = camera_id
+    
     buffer_width = model.vis.global_.offwidth
     buffer_height = model.vis.global_.offheight
     if resolution is None: resolution = [buffer_width, buffer_height]
@@ -193,6 +195,8 @@ class Camera:
         * A (height, width, 3) uint8 numpy array containing RGB values (or None).
         * A (height, width) float32 numpy array containing depth values (or None).
     """
+    if self._camera_id == "for_testing":
+        self._model.geom("target").type = mujoco.mjtGeom.mjGEOM_SPHERE
 
     # Update scene geometry.
     self.update(scene_option=scene_option)
@@ -200,6 +204,9 @@ class Camera:
     # Render scene and text overlays, read contents of RGB or depth buffer.
     #self._simulator.contexts.gl.make_current()
     self._render_on_gl_thread()
+    
+    if self._camera_id == "for_testing":
+        self._model.geom("target").type = mujoco.mjtGeom.mjGEOM_NONE
 
     depth_image = None
     rgb_image = None
